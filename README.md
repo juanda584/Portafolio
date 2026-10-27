@@ -1,0 +1,26 @@
+# Portafolio personal
+
+Sitio web personal, creado con HTML y CSS. Presenta una breve introduccion, informacion personal, experiencia y una seleccion de proyectos.
+
+## Paginas
+
+- `index.html`: pagina de inicio con nombre, fotografia y perfil.
+- `aboutme.html`: seccion Acerca de mi.
+- `experiencias.html`: experiencia laboral y academica.
+- `proyectos.html`: tabla con proyectos, imagenes y enlaces a sitios publicados.
+
+Las paginas principales comparten los estilos de style.css, con una paleta de colores azul y verde, navegacion sencilla y secciones decoradas. La hoja tambien contiene estilos para la tabla de proyectos.
+
+## Proyectos destacados
+
+- Hoja de vida: [Ver proyecto](https://juanda584.github.io/Hoja-de-Vida/)
+- Seccion de conferencistas: [Ver proyecto](https://juanda584.github.io/sem_1actividad-1-robinson/)
+
+## Como verlo
+
+No requiere instalar dependencias en un navegador para comenzar y usa la barra de navegacion para recorrer las secciones para visualizar con un servidor local, puedes abrir la carpeta del proyecto con la extension Live Server de Visual Studio Code.
+
+## Tecnologias
+
+- HTML5
+- CSS3
