@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-cream: #f5f4ef;
+  --color-ink: #20251f;
+  --color-muted: #73796f;
+  --color-accent: #718a48;
+}

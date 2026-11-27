@@ -1,26 +1,18 @@
 # Portafolio personal
 
-Sitio web personal, creado con HTML y CSS. Presenta una breve introduccion, informacion personal, experiencia y una seleccion de proyectos.
+Catálogo de proyectos de Juan David Moreno, creado con HTML, JavaScript y Tailwind CSS 4. La página principal reúne los proyectos publicados y permite filtrarlos por categoría.
 
-## Paginas
+## Desarrollo
 
-- `index.html`: pagina de inicio con nombre, fotografia y perfil.
-- `aboutme.html`: seccion Acerca de mi.
-- `experiencias.html`: experiencia laboral y academica.
-- `proyectos.html`: tabla con proyectos, imagenes y enlaces a sitios publicados.
+```bash
+npm install
+npm run dev
+```
 
-Las paginas principales comparten los estilos de style.css, con una paleta de colores azul y verde, navegacion sencilla y secciones decoradas. La hoja tambien contiene estilos para la tabla de proyectos.
+Abre `index.html` en el navegador o con un servidor local como Live Server. El comando `dev` actualiza `src/output.css` al guardar cambios. Para generar la hoja final una sola vez, ejecuta `npm run build`.
 
-## Proyectos destacados
+La paleta y las fuentes se configuran en `src/input.css`. Las fuentes DM Sans y Space Grotesk se cargan desde Google Fonts, con alternativas sans-serif si no están disponibles.
 
-- Hoja de vida: [Ver proyecto](https://juanda584.github.io/Hoja-de-Vida/)
-- Seccion de conferencistas: [Ver proyecto](https://juanda584.github.io/sem_1actividad-1-robinson/)
+## Añadir un proyecto
 
-## Como verlo
-
-No requiere instalar dependencias en un navegador para comenzar y usa la barra de navegacion para recorrer las secciones para visualizar con un servidor local, puedes abrir la carpeta del proyecto con la extension Live Server de Visual Studio Code.
-
-## Tecnologias
-
-- HTML5
-- CSS3
+En `index.html`, copia uno de los elementos `<article>` de `#lista-proyectos` y actualiza su enlace, imagen, título, descripción y categoría. El atributo `data-category` controla el filtro: usa `personal` o `web`, o agrega una categoría nueva junto con su botón `data-filter`. Actualiza también el número mostrado en el botón «Todos».
