@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Juan David Moreno: proyectos, ideas y aprendizaje en desarrollo web.">
+  <title>Juan David Moreno — Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-    <nav><ul>
-        <li><a href="aboutme.html">Acerca de mi</a></li>
-        <li><a href="experiencias.html">Experiencias</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-    </ul></nav>
+<body class="bg-cream font-sans text-ink antialiased">
+  <header class="border-b border-ink/10">
+    <nav aria-label="Navegación principal" class="mx-auto flex max-w-360 items-center justify-between px-6 py-5 md:px-12 lg:px-20">
+      <a href="#inicio" class="font-display text-xl font-bold tracking-tight">juan<span class="text-accent">.</span></a>
+      <div class="flex items-center gap-6 text-sm font-semibold md:gap-10">
+        <a class="transition hover:text-accent" href="#proyectos">Proyectos</a>
+        <a class="transition hover:text-accent" href="pages/aboutme.html">Sobre mí</a>
+        <a class="hidden transition hover:text-accent md:inline" href="pages/experiencias.html">Experiencia</a>
+        <a class="hidden rounded-full border border-ink px-5 py-2.5 transition hover:bg-ink hover:text-white sm:inline-flex" href="https://github.com/juanda584" target="_blank" rel="noopener noreferrer">Mi GitHub <span aria-hidden="true" class="ml-2">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <img src="img/WhatsApp Image 2026-10-26 at 9.45.50 PM.jpeg" alt="yo" width="150">
-            <h1>Juan David Moreno</h1>
-        </section>
-        <section>
-            <h2>Coder</h2>
-        </section>
-    </main>
+  <main id="inicio">
+    <section class="mx-auto grid max-w-360 gap-12 px-6 pb-20 pt-16 md:px-12 md:pb-28 md:pt-24 lg:grid-cols-[1fr_360px] lg:items-end lg:gap-20 lg:px-20">
+      <div>
+        <p class="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-muted"><span class="h-2 w-2 rounded-full bg-accent"></span> Portafolio · 2026</p>
+        <h1 class="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-[-0.055em] sm:text-6xl lg:text-[5.5rem]">Ideas que toman <span class="text-accent">forma</span> en la web<span class="text-accent">.</span></h1>
+        <div class="mt-9 flex flex-wrap items-center gap-5">
+          <a href="#proyectos" class="inline-flex items-center gap-8 rounded-full bg-ink px-6 py-4 text-sm font-semibold text-white transition hover:bg-accent">Explorar proyectos <span aria-hidden="true">↘</span></a>
+          <span class="text-sm text-muted">Una colección en constante evolución</span>
+        </div>
+      </div>
+      <div class="border-t border-ink/20 pt-6 lg:mb-2">
+        <p class="text-xs font-bold uppercase tracking-[0.18em] text-muted">Hola, soy Juan David Moreno</p>
+        <p class="mt-4 max-w-sm text-lg leading-relaxed text-ink/75">Desarrollador en formación, explorando ideas y construyendo experiencias digitales proyecto a proyecto.</p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="scroll-mt-6 bg-white py-20 md:py-28">
+      <div class="mx-auto max-w-360 px-6 md:px-12 lg:px-20">
+        <div class="flex flex-col justify-between gap-8 border-b border-ink/15 pb-8 md:flex-row md:items-end">
+          <div><p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent">01 / El catálogo</p><h2 class="font-display text-4xl font-medium tracking-[-0.04em] sm:text-5xl">Proyectos seleccionados<span class="text-accent">.</span></h2></div>
+          <a href="pages/proyectos.html" class="inline-flex items-center gap-3 text-sm font-bold transition hover:text-accent">Ver catálogo completo <span aria-hidden="true">↗</span></a>
+          <p class="max-w-xs text-sm leading-relaxed text-muted">Una mirada a lo que he construido, aprendido y compartido hasta ahora.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 py-8" role="group" aria-label="Filtrar proyectos por categoría">
+          <button type="button" data-filter="todos" aria-pressed="true" class="filter-button rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition">Todos <span class="ml-1 opacity-60">03</span></button>
+          <button type="button" data-filter="personal" aria-pressed="false" class="filter-button rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-ink">Personal</button>
+          <button type="button" data-filter="web" aria-pressed="false" class="filter-button rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-ink">Sitios web</button>
+        </div>
+        <div class="grid gap-x-7 gap-y-12 md:grid-cols-2" id="lista-proyectos">
+         
+          <article data-category="web" class="project group">
+            <a href="https://juanda584.github.io/sem_1actividad-1-robinson/" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto Conferencistas (abre en una pestaña nueva)" class="block overflow-hidden rounded-sm bg-[#e8e5de]"><img src="img/Screenshot From 2026-10-21 23-45-27.png" alt="Vista previa del proyecto Conferencistas" class="aspect-16/10 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"></a>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-muted">01 / Sitio web</p><h3 class="font-display text-2xl font-semibold tracking-tight">Conferencistas</h3><p class="mt-2 text-sm leading-relaxed text-muted">Una sección para descubrir diferentes perfiles de conferencistas.</p></div><span aria-hidden="true" class="text-2xl transition group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></div>
+          </article>
+          <article data-category="web" class="project group">
+            <a href="https://juanda584.github.io/Rueda-libre/" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto Rueda Libre (abre en una pestaña nueva)" class="block overflow-hidden rounded-sm bg-[#e3e8e4]"><img src="img/Screenshot From 2026-10-24 00-03-44.png" alt="Vista previa del proyecto Rueda Libre" class="aspect-16/10 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]" loading="lazy"></a>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-muted">02 / Sitio web</p><h3 class="font-display text-2xl font-semibold tracking-tight">Rueda Libre</h3><p class="mt-2 text-sm leading-relaxed text-muted">Un proyecto web desarrollado alrededor de un caso ficticio.</p></div><span aria-hidden="true" class="text-2xl transition group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></div>
+          </article>
+          <article data-category="web" class="project group">
+            <a href="https://juanda584.github.io/prueba-hanner/" target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto Rueda Libre (abre en una pestaña nueva)" class="block overflow-hidden rounded-sm bg-[#e3e8e4]"><img src="img/pruebahanner.png" alt="Vista previa del proyecto Rueda Libre" class="aspect-16/10 w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]" loading="lazy"></a>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-muted">03 / Sitio web</p><h3 class="font-display text-2xl font-semibold tracking-tight">Prueba hanner</h3><p class="mt-2 text-sm leading-relaxed text-muted">prueba de dos horas sobre marcador de tennis</p></div><span aria-hidden="true" class="text-2xl transition group-hover:translate-x-1 group-hover:-translate-y-1">↗</span></div>
+          </article>
+         
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="scroll-mt-6 mx-auto grid max-w-360 gap-10 px-6 py-20 md:grid-cols-[1fr_1.5fr] md:px-12 md:py-28 lg:px-20">
+      <div><p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent">02 / Un poco sobre mí</p><h2 class="font-display text-4xl font-medium tracking-[-0.04em] sm:text-5xl">Siempre aprendiendo<span class="text-accent">.</span></h2></div>
+      <div><p class="max-w-2xl font-display text-2xl leading-snug tracking-tight sm:text-3xl">Me interesa desarrollar el pensamiento crítico, colaborar con otras personas y transformar ideas en software.</p><p class="mt-6 max-w-xl leading-relaxed text-muted">Este portafolio es un registro de mi camino: un lugar para compartir lo que hago y seguir creciendo con cada nuevo reto.</p><div class="mt-8 flex flex-wrap gap-5"><a href="pages/aboutme.html" class="inline-flex items-center gap-6 border-b border-ink pb-2 text-sm font-bold transition hover:text-accent">Conoce más sobre mí <span aria-hidden="true">↗</span></a><a href="pages/experiencias.html" class="inline-flex items-center gap-6 border-b border-ink/30 pb-2 text-sm font-bold text-muted transition hover:border-ink hover:text-accent">Ver experiencia <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="bg-ink text-white"><div class="mx-auto flex max-w-360 flex-col justify-between gap-5 px-6 py-8 text-sm text-white/60 sm:flex-row md:px-12 lg:px-20"><p><span class="font-display text-lg font-bold text-white">juan<span class="text-accent">.</span></span> <span class="ml-3">Juan David Moreno</span></p><p>Hecho con curiosidad y código. © 2026</p></div></footer>
 </body>
 </html>
